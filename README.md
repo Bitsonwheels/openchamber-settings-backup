@@ -25,6 +25,23 @@ The manifest declares exactly these four patterns. The host refuses every other 
 
 Before every restore the extension writes `~/openchamber-backup-before-import-<timestamp>.json` with both current files. That file is the way back if a restore is not what you wanted.
 
+## Updates
+
+This plugin has no built-in auto-updater (OpenChamber guest panels run sandboxed
+without network access). Two ways to update:
+
+1. **Git clone + pull (recommended):** clone this repository into a folder and
+   point OpenChamber at it (`Settings → Extensions → add folder path`). To update:
+   ```
+   cd /path/to/openchamber-settings-backup && git pull
+   ```
+   Then reload OpenChamber (Cmd/Ctrl+R).
+2. **Release ZIP:** download the latest release from
+   https://github.com/Bitsonwheels/openchamber-settings-backup/releases/latest
+   and replace the installed folder.
+
+The panel's **Updates** button opens the releases page.
+
 ## What is in a backup
 
 - **Profile keys** (appearance, chat, shortcuts, notifications, models, voice, …): the app's `preferences.json` entries, including per-surface values such as the phone's own theme.
