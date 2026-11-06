@@ -1,6 +1,6 @@
 {
   "name": "@openchamber/example-settings-backup",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "private": true,
   "type": "module",
   "openchamber": {
@@ -20,7 +20,9 @@
         "~/.config/openchamber/settings.json",
         "~/.config/openchamber/preferences.json",
         "~/openchamber-backup*.json",
-        "~/openchamber-backup*.ocbackup"
+        "~/openchamber-backup*.ocbackup",
+        "~/Downloads/openchamber-backup*.json",
+        "~/Downloads/openchamber-backup*.ocbackup"
       ]
     }
   },
