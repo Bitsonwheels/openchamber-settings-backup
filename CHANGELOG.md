@@ -3,6 +3,19 @@
 All notable changes to the Settings Backup extension are documented here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.11] - 2026-11-06
+
+### Fixed
+- TDZ `ReferenceError` on first mount with non-English locale: locale-change
+  handling now runs after the `didMount` guard and uses the module-level
+  `refreshLabelsCallback` instead of TDZ-bound `rowViews`/`refreshLabels`.
+
+## [0.1.10] - 2026-11-06
+
+### Fixed
+- Standalone manifest missing `~/Downloads` permission (added 2 patterns).
+- Re-render on late dictionary load / locale change.
+
 ## [0.1.9] - 2026-11-06
 
 ### Added
