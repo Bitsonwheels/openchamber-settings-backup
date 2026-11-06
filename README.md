@@ -15,6 +15,22 @@ Everything happens on the instance the browser is connected to: two declared fil
 
 The manifest declares exactly these four patterns. The host refuses every other path, and the install dialog shows them before you approve.
 
+## Install
+
+**Recommended (enables auto-update):** install from the Git URL so OpenChamber can
+check for and apply updates:
+
+```
+https://github.com/Bitsonwheels/openchamber-settings-backup.git
+```
+
+In OpenChamber: **Settings → Extensions → add Git URL** → paste the URL above →
+approve filesystem access.
+
+**Alternative (no auto-update):** clone/download the folder and add the absolute
+folder path under **Settings → Extensions → add folder path**, or install the
+release ZIP from https://github.com/Bitsonwheels/openchamber-settings-backup/releases.
+
 ## Use
 
 1. Install the folder: **Settings → Extensions → add an absolute folder path**, for example `<repo>/packages/sdk/examples/settings-backup`. Approve the filesystem access.
@@ -27,20 +43,20 @@ Before every restore the extension writes `~/openchamber-backup-before-import-<t
 
 ## Updates
 
-This plugin has no built-in auto-updater (OpenChamber guest panels run sandboxed
-without network access). Two ways to update:
+Extensions installed from a **Git URL** update themselves: OpenChamber checks
+each of them at most once an hour (or immediately via **Check for updates** in
+Settings → Extensions). A newer version shows **Update available** with an
+**Update** button; permissions, accounts and settings are kept.
 
-1. **Git clone + pull (recommended):** clone this repository into a folder and
-   point OpenChamber at it (`Settings → Extensions → add folder path`). To update:
-   ```
-   cd /path/to/openchamber-settings-backup && git pull
-   ```
-   Then reload OpenChamber (Cmd/Ctrl+R).
-2. **Release ZIP:** download the latest release from
-   https://github.com/Bitsonwheels/openchamber-settings-backup/releases/latest
-   and replace the installed folder.
+Folder and ZIP installs do not auto-update — replace them by hand, or add
+`#v0.1.7` (or any tag/branch) to the Git URL to pin a version.
 
-The panel's **Updates** button opens the releases page.
+Manual fallback:
+1. `cd /path/to/openchamber-settings-backup && git pull`
+2. Reload OpenChamber (Cmd/Ctrl+R).
+
+Or download the latest release ZIP:
+https://github.com/Bitsonwheels/openchamber-settings-backup/releases/latest
 
 ## What is in a backup
 
