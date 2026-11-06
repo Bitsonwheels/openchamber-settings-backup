@@ -3,6 +3,12 @@
 All notable changes to the Settings Backup extension are documented here.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.1.9] - 2026-11-06
+
+### Added
+- Extension version (`v0.1.9`) is now shown in the panel footer, plus a hint
+  that updates are managed via Settings → Extensions.
+
 ## [0.1.8] - 2026-11-06
 
 ### Changed
