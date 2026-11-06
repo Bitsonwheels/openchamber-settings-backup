@@ -1,0 +1,30 @@
+{
+  "name": "@openchamber/example-settings-backup",
+  "version": "0.1.7",
+  "private": true,
+  "type": "module",
+  "openchamber": {
+    "apiVersion": 1,
+    "engines": {
+      "openchamber": ">=2.5.0"
+    },
+    "contributes": {
+      "panel": {
+        "id": "settings-backup",
+        "name": "Settings Backup",
+        "icon": "archive",
+        "entry": "panel/index.html"
+      },
+      "page": true,
+      "filesystem": [
+        "~/.config/openchamber/settings.json",
+        "~/.config/openchamber/preferences.json",
+        "~/openchamber-backup*.json",
+        "~/openchamber-backup*.ocbackup"
+      ]
+    }
+  },
+  "dependencies": {
+    "@openchamber/sdk": "workspace:*"
+  }
+}

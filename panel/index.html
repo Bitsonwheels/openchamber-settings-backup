@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Settings Backup</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: var(--oc-bg); color: var(--oc-fg); }
+      #root { height: 100%; }
+      .key-list { display: flex; flex-direction: column; max-height: 340px; overflow: auto; border: 1px solid var(--oc-border); border-radius: 10px; }
+      .key-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 7px 10px; border-top: 1px solid var(--oc-border); font: 12px var(--oc-mono); cursor: pointer; }
+      .key-row:first-child { border-top: 0; }
+      .key-row:hover { background: var(--oc-hover); }
+      .key-row input { width: 15px; height: 15px; margin: 0; accent-color: var(--oc-primary); }
+      .key-name { overflow-wrap: anywhere; }
+      .key-meta { color: var(--oc-muted); font: 11px var(--oc-font); white-space: nowrap; }
+      .key-row.is-secret .key-meta { color: var(--oc-warning-text); }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
