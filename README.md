@@ -4,7 +4,7 @@ An extension that writes the settings this OpenChamber instance keeps on disk in
 
 Everything happens on the instance the browser is connected to: two declared files are read, one file in your home folder is written, and nothing is sent anywhere.
 
-![Bildschirmfoto 2026-11-11 um 01.29.17](assets/Bildschirmfoto%202026-11-11%20um%2001.29.17.png)
+![Bildschirmfoto 2026-11-11 um 01.29.17](imgs/Bildschirmfoto%202026-11-11%20um%2001.29.17.png)
 
 
 ## What it touches
